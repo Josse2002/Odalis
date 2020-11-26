@@ -94,7 +94,6 @@ h2.center{
     font-family: Roboto, "Helvetica Neue", sans-serif;
     font-size: 18px;
     perspective: 1000px;
-    background-color: #f5f5f5;
     flex-direction: column;
     justify-content: center;
     align-items: center;
