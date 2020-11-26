@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>METAS</title>
+    <link rel="stylesheet" href="index3.css">
+</head>
+<body>
+    <h1><span class="blue"></span>NUESTRAS<span class="blue"></span> <span class="yellow">METAS</pan></h1>
+        <h2>EN LA VIDA</h2>
+        
+        <table class="container">
+            <thead>
+                <tr>
+                    <th><h1>META</h1></th>
+                    <th><h1>ESTADO</h1></th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Graduarnos juntos</td>
+                    <td>Pendiente</td>
+                    
+                </tr>
+                <tr>
+                    <td>Ir a comer juntos</td>
+                    <td>Pendiente</td>
+                    
+                </tr>
+                <tr>
+                    <td>Amarnos</td>
+                    <td>Por siempre</td>
+                    
+                </tr>
+            <tr>
+                    <td>Besarnos</td>
+                    <td>Pendiente y por siempre</td>
+                    
+                </tr>
+            <tr>
+                    <td>Abrazarnos</td>
+                    <td>Por siempre</td>
+                    
+                </tr>
+            <tr>
+                    <td>Conseguir Trabajo</td>
+                    <td>Pendiente</td>
+                    
+                </tr>
+                <tr>
+                    <td>Casarnos</td>
+                    <td>Pendiente</td>
+                    
+                </tr>
+                <tr>
+                    <td>Ir a Korea</td>
+                    <td>Pendiente</td>
+                    
+                </tr>
+                <tr>
+                    <td>Tener 3 hijos</td>
+                    <td>Pendiente</td>
+                    
+                </tr>
+                <tr>
+                    <td>Viajar mucho</td>
+                    <td>Pendiente</td>
+                    
+                </tr>
+                <tr>
+                    <td>Cocinar juntos</td>
+                    <td>Pendiente</td>
+                    
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="boton">
+            <div class="btn">
+            <div class="btn-back">
+              <p>Para volver necesitas besarme bien sabroso</p>
+              <button onclick='window.location.replace("index.html")' class="yes">Si</button>
+              <button class="no" onclick='alert("Yo si me quiero besar :( mejor matame")'>No</button>
+            </div>
+            <div class="btn-front">METAS</div>
+          </div>
+          
+          </div>
+          <script>
+            var btn = document.querySelector( '.btn' );
+      
+      var btnFront = btn.querySelector( '.btn-front' ),
+          btnYes = btn.querySelector( '.btn-back .yes' ),
+          btnNo = btn.querySelector( '.btn-back .no' );
+      
+      btnFront.addEventListener( 'click', function( event ) {
+        var mx = event.clientX - btn.offsetLeft,
+            my = event.clientY - btn.offsetTop;
+      
+        var w = btn.offsetWidth,
+            h = btn.offsetHeight;
+          
+        var directions = [
+          { id: 'top', x: w/2, y: 0 },
+          { id: 'right', x: w, y: h/2 },
+          { id: 'bottom', x: w/2, y: h },
+          { id: 'left', x: 0, y: h/2 }
+        ];
+        
+        directions.sort( function( a, b ) {
+          return distance( mx, my, a.x, a.y ) - distance( mx, my, b.x, b.y );
+        } );
+        
+        btn.setAttribute( 'data-direction', directions.shift().id );
+        btn.classList.add( 'is-open' );
+      
+      } );
+      
+      btnYes.addEventListener( 'click', function( event ) {	
+        btn.classList.remove( 'is-open' );
+      } );
+      
+      btnNo.addEventListener( 'click', function( event ) {
+        btn.classList.remove( 'is-open' );
+      } );
+      
+      function distance( x1, y1, x2, y2 ) {
+        var dx = x1-x2;
+        var dy = y1-y2;
+        return Math.sqrt( dx*dx + dy*dy );
+      }
+        </script>
+</body>
+
+</html>

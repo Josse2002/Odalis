@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odalis y Jose</title>
+    <link rel="icon" type="image/png"
+        href="img/kisspng-portable-network-graphics-clip-art-8bit-heart-chip-heart8bit-sbc-niu-midia-5beafe8e572339.7765987115421272463569.png"
+        sizes="16x16">
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+    <div class="fondo">
+        <h1>BIENVENIDA AMORCITO</h1>
+    </div>
+    <main>
+        <div class="info">
+            <h2>FELIZ 7 MESES AMOOR</h2>
+            <div class="manito"></div>
+            <p>Holaaa amooor, felices 7 meses juntos amorcito de mi vida, decidi hacer esta pagina web
+                especialmente para ti, para demostrarte lo mucho que te amo y te adoro y lo mucho que lo
+                hare por toda la eternidad, espero te guste amorcito, <b>SIGAMOS SIEMPRE JUNTOS</b>. <br>
+                Y es que no hay nada mas hermoso en este mundo que una sonrisa tuya, una mirada, simplemente tu,
+                contigo soy mas que feliz, me haces sonreir, me cuentas cosas interesantes y hermosas sobre ti amorcito,
+                que preciosa mujer
+                tengo en mi vida, y asi sera por siempre, porque contigo estare hasta mas alla de la muerte
+                porque no necesito nada ni nadie en mi vida mas que tu mi vida, mas que tu cariño y amor.</p>
+        </div>
+    </main>
+    <div class="fondo2">
+        <h1>ERES LA MUJER MAS HERMOSA DEL MUNDO</h1>
+    </div>
+
+    
+        <h2 class="center">NUESTRA HISTORIA</h2>
+        <div class="manito"></div>
+        <div class="historia">
+            <img src="img/IMG_20190812_093738.jpg" alt="" align="left"><p>Nuestra historia comienza unicamente perfecta, José un chico que no sabe nada, callado, sin amigos tenia un gran pero
+                graaan amor por una niña llamada Odalis, ella era super hermosa, super bella, José se quedo perplejo al ver lo hermosa que 
+                estaba, el amor que irradiaba hacia José era inmensoooo <b>Y sin pensarlo, Odalis se convirtio en la primera del oscuro
+                invierno de José </b><br> <br> Jose estaba muy feliz, al fin tenia a una mujer perfecta, solo faltaba una cosa, <b>ENAMORARLA</b> Y Jose estaba dispuesto
+                a enamorarla y hacerla su novia para siempre, pero era muy timido :(, le costaba hablar, cada que Odalis estaba cerca 
+                el se ponia nervioso, el olor de su cabello, su sonrisa, sus labios volvian loco a Jose, eran su pan de cada dia, el sol que
+                ilumina cada mañana su rostro de Jose,es aquel rostro de Odalis, con su sonrisa tan bella y su alegria tan hermosa
+                todo su amor, creando asi la mejor historia de amor jamas antes contada, llena de amor, vida, comprension y ternura 
+               a cada momento, y es que es tan bella la novia de Jose que jamas jamas se separaran Jose:<b>"JAMAS JAAAAMAAAS VOY A DEJAR DE SER TUYO
+                   TE LO DIGO CON ORGULLO, TU Y NADA MAAAS"
+            </p>
+        </div>
+       <br><br>
+        <h2 class="center">NUESTRAS METAS</h2>
+        <div class="manito"></div>
+<div class="boton">
+    <div class="btn">
+    <div class="btn-back">
+      <p>Quieres casarte y estar conmigo siempre?</p>
+      <button onclick='window.location.replace("metas.html")' class="yes">Si</button>
+      <button class="no" onclick='alert("Enserio no nos vamos a casar :( pero si ya tenia todo listo bebe")'>No</button>
+    </div>
+    <div class="btn-front">METAS</div>
+  </div>
+  
+  </div>
+
+
+  <script>
+      var btn = document.querySelector( '.btn' );
+
+var btnFront = btn.querySelector( '.btn-front' ),
+    btnYes = btn.querySelector( '.btn-back .yes' ),
+    btnNo = btn.querySelector( '.btn-back .no' );
+
+btnFront.addEventListener( 'click', function( event ) {
+  var mx = event.clientX - btn.offsetLeft,
+      my = event.clientY - btn.offsetTop;
+
+  var w = btn.offsetWidth,
+      h = btn.offsetHeight;
+	
+  var directions = [
+    { id: 'top', x: w/2, y: 0 },
+    { id: 'right', x: w, y: h/2 },
+    { id: 'bottom', x: w/2, y: h },
+    { id: 'left', x: 0, y: h/2 }
+  ];
+  
+  directions.sort( function( a, b ) {
+    return distance( mx, my, a.x, a.y ) - distance( mx, my, b.x, b.y );
+  } );
+  
+  btn.setAttribute( 'data-direction', directions.shift().id );
+  btn.classList.add( 'is-open' );
+
+} );
+
+btnYes.addEventListener( 'click', function( event ) {	
+  btn.classList.remove( 'is-open' );
+} );
+
+btnNo.addEventListener( 'click', function( event ) {
+  btn.classList.remove( 'is-open' );
+} );
+
+function distance( x1, y1, x2, y2 ) {
+  var dx = x1-x2;
+  var dy = y1-y2;
+  return Math.sqrt( dx*dx + dy*dy );
+}
+  </script>
+   
+</body>
+
+</html>
